@@ -1,0 +1,13 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1da1f2;
+  z-index: -1;
+  color: #FFFFFF;
+  background-image: url("https://www.transparenttextures.com/patterns/shley-tree-1.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
