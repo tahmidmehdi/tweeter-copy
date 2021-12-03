@@ -34,3 +34,14 @@ new-tweet {
   color: #FFFFFF;
   text-align: center;
 }
+
+#error-message {
+  color: red;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  margin: auto;
+  width: 50%;
+  border: 3px solid red;
+  text-align: center;
+  display: none;
+}

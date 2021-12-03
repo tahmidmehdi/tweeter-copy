@@ -25,6 +25,36 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script>
+      $(function() {
+        // Use the jQuery library to add an event listener for submit
+        $("#tweet-form").submit(function(event) {
+          event.preventDefault();
+          $('#error-message').slideUp();
+          // Serialize the form data
+          const formData = $(this).serialize();
+          // user should be given an error that their tweet content is too long or that it is not present
+          if (this.text.value.length > 140) {
+            $('#error-message').html('<span>Your tweet is too long!</span>');
+            $('#error-message').slideDown( "slow", function() {
+              // Animation complete.
+            });
+          } else if (this.text.value.length <= 0 || !this.text.value) {
+            $('#error-message').html('<span>Your tweet is empty!</span>');
+            $('#error-message').slideDown( "slow", function() {
+              // Animation complete.
+            });
+          } else {
+            // Send the data to the server
+            $.post("/tweets", formData, function(data) {
+              $("#tweet-form").trigger("reset");
+              location.reload();
+            });
+          }
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -42,7 +72,7 @@
       </div>
       <br>
       <div>
-        <h2>Your Name</h2>
+        <h2>Tahmid Mehdi</h2>
       </div>
     </header>
   
@@ -50,7 +80,7 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST">
+        <form action="/tweets/" method="POST" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="button-counter">
@@ -58,26 +88,11 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+        <br>
+        <div id="error-message"></div>
       </section>
       <br>
-      <section class="tweets">
-        <article>
-          <header>
-            <div class="username">
-              <i class="fas fa-user-circle"></i> Newton
-            </div>
-            <div class="handle">@SirIsaac</div>
-          </header>
-          <p>Standing on the shoulders of giants</p>
-          <footer>
-            <div><script>console.log(timeago.format(1473245023718));</script></div>
-            <div class="tweet-buttons">
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-            </div>
-          </footer>
-        </article>
+      <section class="tweets" id='tweets-container'>
       </section>   
     </main>
   </body>
