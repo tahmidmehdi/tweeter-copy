@@ -23,5 +23,5 @@ Tweeter lets you write tweets and see what other people have written. It's desig
 
 ## Screenshots
 
-!["Desktop Preview"](https://github.com/tahmidmehdi/tweeter-copy/blob/master/docs/desktop-preview.png)]
-!["Mobile Preview"](https://github.com/tahmidmehdi/tweeter-copy/blob/master/docs/mobile-preview.png)]
+!["Desktop Preview"](https://github.com/tahmidmehdi/tweeter-copy/blob/master/docs/desktop-preview.png)
+!["Mobile Preview"](https://github.com/tahmidmehdi/tweeter-copy/blob/master/docs/mobile-preview.png)
