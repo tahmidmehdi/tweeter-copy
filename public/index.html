@@ -54,6 +54,12 @@
             });
           }
         });
+
+        // add an event listener for nav-down-arrow
+        $("#nav-down-arrow").click(function() {
+          scroll(0,0);  // scroll to top of page
+          $("#tweet-text").focus();
+        });
       });
     </script>
   </head>
@@ -64,7 +70,7 @@
       <span>tweeter</span>
       <div class="right">
         <div><b>Write</b> a new tweet</div>
-        <div><i class="fas fa-angle-double-down" style="color: red;"></i></div>
+        <div><i class="fas fa-angle-double-down" style="color: red;" id="nav-down-arrow"></i></div>
       </div>
     </nav>
     <div id="wrapper">

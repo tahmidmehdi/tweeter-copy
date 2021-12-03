@@ -1,7 +1,6 @@
 $(document).ready(function() {
   // --- our code goes here ---
-  console.log('composer-char-counter.js loaded');
-  // Using jQuery and an appropriate selector, register an event handler to the textarea
+  // register an event handler to the textarea
   const tweetBox = document.querySelector('#tweet-text');
   tweetBox.addEventListener('keyup', function(event) {
     const tweetText = this.value;

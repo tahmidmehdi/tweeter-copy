@@ -52,6 +52,10 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax({url: '/tweets', method: 'GET',
       success: function(response) {
+        // sort tweets by created_at
+        response.sort(function(a, b) {
+          return b.created_at - a.created_at;
+        });
         renderTweets(response);
         // update timestamps of articles after tweets are rendered
         const datetimes = document.querySelectorAll('.dates_to_be_rendered')
