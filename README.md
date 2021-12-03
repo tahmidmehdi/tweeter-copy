@@ -19,4 +19,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## The Web App
 
-Tweeter lets you write tweets and see what other people have written. It's designed for mobile and desktop devices. Usernames and avatars are randomly generated for now. 
+Tweeter lets you write tweets and see what other people have written. It's designed for mobile and desktop devices. Usernames and avatars are randomly generated for now.
+
+## Screenshots
+
+!["Desktop Preview"](https://github.com/tahmidmehdi/tweeter-copy/blob/master/docs/desktop-preview.png)]
+!["Mobile Preview"](https://github.com/tahmidmehdi/tweeter-copy/blob/master/docs/mobile-preview.png)]
