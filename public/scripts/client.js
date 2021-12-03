@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// fix strings to avoid XSS attacks
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -32,7 +33,7 @@ const createTweetElement = function(tweet) {
       <p>${escape(tweet.content.text)}</p>
       <footer>
         <div>
-          <span class="need_to_be_rendered">${tweet.created_at}</span>
+          <span class="dates_to_be_rendered">${tweet.created_at}</span>
         </div>
         <div class="tweet-buttons">
           <i class="fas fa-flag"></i>
@@ -47,12 +48,13 @@ const createTweetElement = function(tweet) {
 }
 
 $(document).ready(function() {
-  // define a function called loadTweets that is responsible for fetching tweets from the http://localhost:8080/tweets page
+  // load tweets
   const loadTweets = function() {
     $.ajax({url: '/tweets', method: 'GET',
       success: function(response) {
         renderTweets(response);
-        const datetimes = document.querySelectorAll('.need_to_be_rendered')
+        // update timestamps of articles after tweets are rendered
+        const datetimes = document.querySelectorAll('.dates_to_be_rendered')
         datetimes.forEach(function(datetime) {
           datetime.innerHTML = timeago.format(datetime.innerHTML);
         });

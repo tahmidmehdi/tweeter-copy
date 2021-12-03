@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -28,7 +29,7 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script>
       $(function() {
-        // Use the jQuery library to add an event listener for submit
+        // add an event listener for submit
         $("#tweet-form").submit(function(event) {
           event.preventDefault();
           $('#error-message').slideUp();
@@ -66,34 +67,41 @@
         <div><i class="fas fa-angle-double-down" style="color: red;"></i></div>
       </div>
     </nav>
-    <header>
-      <div>
-        <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-        <h2>Tahmid Mehdi</h2>
-      </div>
-    </header>
-  
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST" id="tweet-form">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="button-counter">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
+    <div id="wrapper">
+      <header>
+        <div>
+          <img src="/images/profile-hex.png"> 
+        </div>
         <br>
-        <div id="error-message"></div>
-      </section>
-      <br>
-      <section class="tweets" id='tweets-container'>
-      </section>   
-    </main>
+        <div>
+          <h2>Tahmid Mehdi</h2>
+        </div>
+      </header>
+    
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <!-- write new tweets -->
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <!-- new tweet form -->
+          <form action="/tweets/" method="POST" id="tweet-form">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <!-- tweet button -->
+            <div class="button-counter">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+          <br>
+          <!-- error message if tweet is invalid -->
+          <div id="error-message"></div>
+        </section>
+        <br>
+        <!-- list of tweets -->
+        <section class="tweets" id='tweets-container'>
+        </section>   
+      </main>
+    </div>
   </body>
 </html>

@@ -1,13 +1,11 @@
 .tweets article {
   border-style: solid;
   background-color: #f4f1ec;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
-
 .tweets article:hover {
-  box-shadow: 10px 5px 5px #BEBEBE;
+  box-shadow: 10px 5px 5px #808080;
 }
-
 .tweets header {
   display: flex;
   flex-direction: row;
@@ -20,27 +18,13 @@
   margin: auto;
   width: 95%;
 }
-
-.username {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: lighter;
-  color: #000000;
-}
-
-.handle {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #BEBEBE;
-  font-weight: bold;
-}
-
 .tweets p {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background-color: #f4f1ec;
   margin: auto;
   width: 95%;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #000000;
 }
-
 .tweets footer {
   display: flex;
   flex-direction: row;
@@ -51,6 +35,18 @@
   margin: auto;
   margin-bottom: 10px;
   width: 90%;
+}
+
+.username {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: lighter;
+  color: #000000;
+}
+
+.handle {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #808080;
+  font-weight: bold;
 }
 
 .tweet-buttons {

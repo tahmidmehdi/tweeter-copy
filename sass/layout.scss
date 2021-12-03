@@ -3,10 +3,14 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+$body-color: #545149;
+$body-bg: #f4f1ec;
+$source-sans-pro: 'Source Sans Pro', sans-serif;
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,11 +18,12 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $body-color;
+  background-color: $body-bg;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $source-sans-pro;
   padding-top: 120px;
 }
 
@@ -27,7 +32,7 @@ body {
  */
 main {
   width: 90%;
-  background-color: #f4f1ec;
+  background-color: $body-bg;
   /*center main in parent container*/
   margin: 0 auto;
 }

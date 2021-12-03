@@ -1,0 +1,35 @@
+$nav-bg: #4056A1;
+$white: #FFFFFF;
+$bungee: 'Bungee', sans-serif;
+$source-sans-pro: 'Source Sans Pro', sans-serif;
+@mixin vert-align($align: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  justify-content: $align;
+}
+
+nav {
+  font-family: $bungee;
+  height: 120px;
+  width: 100%;
+  background-color: $nav-bg;
+  color: $white;
+  padding: 0 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+
+  span {
+    @include vert-align;
+    font-family: $bungee;
+  }
+
+  .right {
+    @include vert-align;
+    font-family: $source-sans-pro;
+  }
+}

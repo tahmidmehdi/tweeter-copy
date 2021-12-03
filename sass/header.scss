@@ -1,13 +1,20 @@
-header {
+$header-bg: #1da1f2;
+$white: #FFFFFF;
+@mixin vert-align($align: center) {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: $align;
+  justify-content: $align;
+}
+
+
+header {
+  @include vert-align;
   height: 400px;
   width: 100%;
-  background-color: #1da1f2;
+  background-color: $header-bg;
   z-index: -1;
-  color: #FFFFFF;
+  color: $white;
   background-image: url("https://www.transparenttextures.com/patterns/shley-tree-1.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }

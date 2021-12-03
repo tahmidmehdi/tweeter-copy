@@ -1,0 +1,16 @@
+@media (min-width: 1024px) {
+  #wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 100px;
+  }
+
+  header {
+    width: 30%;
+  }
+
+  main {
+    width: 60%;
+  }
+}

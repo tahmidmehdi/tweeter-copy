@@ -1,0 +1,82 @@
+$nav-bg: #4056A1;
+$white: #FFFFFF;
+$red: #FF0000;
+$black: #000000;
+$grey: #808080;
+$bungee: 'Bungee', sans-serif;
+$source-sans-pro: 'Source Sans Pro', sans-serif;
+$body-bg: #f4f1ec;
+$mustard: #cfc51d;
+
+.tweets {
+  article {
+    border-style: solid;
+    background-color: $body-bg;
+    font-family: $source-sans-pro;
+  }
+
+  article:hover {
+    box-shadow: 10px 5px 5px $grey;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $body-bg;
+    background-image: none;
+    height: 75px;
+    width: 100%;
+    margin: auto;
+    width: 95%;
+  }
+
+  p {
+    font-family: $source-sans-pro;
+    background-color: $body-bg;
+    margin: auto;
+    width: 95%;
+    border-bottom: 5px solid $black;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $body-bg;
+    font-size: small;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 90%;
+  }
+}
+
+.username {
+  font-family: $source-sans-pro;
+  font-weight: lighter;
+  color: $black;
+}
+
+.handle {
+  font-family: $source-sans-pro;
+  color: $grey;
+  font-weight: bold;
+}
+
+.tweet-buttons {
+  color: $nav-bg;
+}
+
+.fa-flag:hover {
+  color: $mustard;
+}
+
+.fa-retweet:hover {
+  color: $mustard;
+}
+
+.fa-heart:hover {
+  color: $mustard;
+}

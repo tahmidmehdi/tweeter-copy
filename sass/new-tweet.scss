@@ -1,0 +1,55 @@
+$nav-bg: #4056A1;
+$white: #FFFFFF;
+$red: #FF0000;
+$black: #000000;
+$bungee: 'Bungee', sans-serif;
+$source-sans-pro: 'Source Sans Pro', sans-serif;
+$body-bg: #f4f1ec;
+
+new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $source-sans-pro;
+}
+
+#tweet-form {
+  display: flex;
+  flex-direction: column;
+  font-family: $source-sans-pro;
+
+  label {
+    font-family: $source-sans-pro;
+    font-weight: bold;
+  }
+
+  textarea {
+    border-bottom: 5px solid $black;
+    background-color: $body-bg;
+  }
+}
+
+.button-counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $bungee;
+
+  button {
+    background-color: $nav-bg;
+    color: $white;
+    text-align: center;
+  }
+}
+
+#error-message {
+  color: $red;
+  font-family: $source-sans-pro;
+  font-weight: bold;
+  margin: auto;
+  width: 50%;
+  border: 3px solid $red;
+  text-align: center;
+  display: none;
+}

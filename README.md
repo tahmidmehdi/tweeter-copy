@@ -16,3 +16,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## The Web App
+
+Tweeter lets you write tweets and see what other people have written. It's designed for mobile and desktop devices. Usernames and avatars are randomly generated for now. 
